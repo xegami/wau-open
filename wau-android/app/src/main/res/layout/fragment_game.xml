@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_fragment_game_table"
+        android:layout_width="19.45dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/ic_table"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_fragment_game_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:fontFamily="@font/helvetica"
+        android:gravity="center"
+        android:text="000"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_fragment_game_table"
+        app:layout_constraintLeft_toRightOf="@id/iv_fragment_game_table"
+        app:layout_constraintTop_toTopOf="@id/iv_fragment_game_table" />
+
+    <ImageView
+        android:id="@+id/iv_fragment_game_password"
+        android:layout_width="13.19dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="25dp"
+        android:src="@drawable/ic_lock"
+        app:layout_constraintBottom_toBottomOf="@id/iv_fragment_game_table"
+        app:layout_constraintLeft_toRightOf="@id/tv_fragment_game_code"
+        app:layout_constraintTop_toTopOf="@id/iv_fragment_game_table" />
+
+    <TextView
+        android:id="@+id/tv_fragment_game_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:fontFamily="@font/helvetica"
+        android:gravity="center"
+        android:text="0000"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_fragment_game_password"
+        app:layout_constraintLeft_toRightOf="@id/iv_fragment_game_password"
+        app:layout_constraintTop_toTopOf="@id/iv_fragment_game_password" />
+
+    <TextView
+        android:id="@+id/tv_fragment_game_round"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="25dp"
+        android:fontFamily="@font/helvetica"
+        android:text="1 / 20"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_fragment_game_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/background_rounded_shadow"
+        app:layout_constraintTop_toBottomOf="@id/iv_fragment_game_table">
+
+        <ImageView
+            android:id="@+id/iv_fragment_game_question_number_flag"
+            android:src="@drawable/ic_number_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="30dp"/>
+
+        <TextView
+            android:id="@+id/tv_fragment_game_question_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="999"
+            android:textSize="8dp"
+            android:shadowDy="0"
+            android:shadowDx="0"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/dark_shadow"
+            app:layout_constraintLeft_toLeftOf="@id/iv_fragment_game_question_number_flag"
+            app:layout_constraintTop_toTopOf="@id/iv_fragment_game_question_number_flag"
+            app:layout_constraintRight_toRightOf="@id/iv_fragment_game_question_number_flag"
+            app:layout_constraintBottom_toBottomOf="@id/iv_fragment_game_question_number_flag"
+            />
+
+        <TextView
+            android:layout_marginTop="30dp"
+            app:layout_goneMarginLeft="30dp"
+            android:id="@+id/tv_fragment_game_question_body_beginning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:gravity="left"
+            android:text="¿Quién de nosotros..."
+            android:textSize="14dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_fragment_game_question_body_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="17dp"
+            android:gravity="right"
+            android:text="...se comería una buena polla?"
+            android:textSize="18dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_fragment_game_question_body_beginning" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <GridLayout
+        android:id="@+id/gl_fragment_game_players_ready"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:columnCount="5"
+        android:useDefaultMargins="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_fragment_game_question" />
+
+    <TextView
+        android:id="@+id/tv_fragment_game_waiting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="25dp"
+        android:fontFamily="@font/helvetica"
+        android:gravity="center"
+        android:text="Esperando al resto de jugadores..."
+        android:textColor="@color/grey_font"
+        android:textSize="14dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/gl_fragment_game_players_ready" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_fragment_game_players_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_fragment_game_skip"
+        app:layout_constraintTop_toBottomOf="@id/tv_fragment_game_waiting" />
+
+    <ToggleButton
+        android:id="@+id/btn_fragment_game_skip"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/selector_skip_question"
+        android:text=""
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <View
+        android:id="@+id/view_fragment_game_anti_touch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="10dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

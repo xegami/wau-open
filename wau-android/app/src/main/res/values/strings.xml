@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">¿Quién de nosotros?</string>
+    <string name="about_body">Desarrollado por Enmanuel Domínguez, en colaboración de Luis M. Ortiz (UI) y Omar Ramirez (SFX)</string>
+    <string name="hot_mode_alert_body">El modo HOT genera algunas preguntas que pueden dañar la sensibilidad de uno o varios integrantes del grupo. Si lo vas a activar, recuerda tomártelo (tanto tú como tus amigos) siempre desde el humor y con el fin de pasarlo bien. ¡A reírse!</string>
+    <string name="hot_mode_activated_body">El modo HOT está activado. Se generarán algunas preguntas que pueden dañar la sensibilidad de uno o varios integrantes del grupo. Recuerda tomártelo (tanto tú como tus amigos) siempre desde el humor y con el fin de pasarlo bien. ¡A reírse!</string>
+</resources>

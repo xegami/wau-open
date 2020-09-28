@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="25dp"
+    android:background="@drawable/background_rounded_dark_shadow"
+    tools:context=".activity.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_dialog_fragment_basic_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center"
+        android:text="Info."
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_dialog_fragment_basic_accept"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/selector_accept_no_toggle"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_dialog_fragment_basic_cancel"
+        app:layout_constraintTop_toBottomOf="@id/tv_dialog_fragment_basic_title" />
+
+    <Button
+        android:id="@+id/btn_dialog_fragment_basic_cancel"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/selector_cancel_no_toggle"
+        android:textOff=""
+        android:textOn=""
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@id/btn_dialog_fragment_basic_accept"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dialog_fragment_basic_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

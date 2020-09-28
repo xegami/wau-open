@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#293340</color>
+    <color name="colorPrimaryDark">#3B217A</color>
+    <color name="colorAccent">#E8E3E5</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="darkGreen">#208326</color>
+    <color name="green">#00FF11</color>
+    <color name="orange">#BD8E28</color>
+    <color name="red">#FF5252</color>
+    <color name="light_red">#FB9999</color>
+    <color name="darkerBlue">#125AA1</color>
+
+    <color name="lightBlue">#00838F</color>
+
+    <color name="lightGreen">#92B878</color>
+
+    <color name="dark">#293340</color>
+
+    <color name="light_font">#FBFBFB</color>
+    <color name="grey_font">#ff9e9e9e</color>
+    <color name="text_shadow">#7F000000</color>
+    <color name="text_shadow_white">#FFFFFF</color>
+
+    <color name="semi_transparent_pink_white">#69FFFFFF</color>
+
+    <color name="dark_shadow">#1C232B</color>
+    <color name="shadow">#E61C232B</color>
+    <color name="lesser_shadow">#E6323C47</color>
+
+    <color name="disabled_text">#ABABAB</color>
+
+    <color name="hot_start">#FFB92C</color>
+    <color name="hot_end">#FF1717</color>
+
+    <color name="player_1_start">#5CFFD4</color>
+    <color name="player_1_end">#7B3EFF</color>
+    <color name="player_2_start">#CDFF31</color>
+    <color name="player_2_end">#4AFFDC</color>
+    <color name="player_3_start">#FFEE1F</color>
+    <color name="player_3_end">#FF17C3</color>
+    <color name="player_4_start">#C048FF</color>
+    <color name="player_4_end">#5440FF</color>
+    <color name="player_5_start">#66FBFF</color>
+    <color name="player_5_end">#FF36F1</color>
+    <color name="player_6_start">#FFFF3B</color>
+    <color name="player_6_end">#FF6700</color>
+    <color name="player_7_start">#FFFF43</color>
+    <color name="player_7_end">#3EFF6B</color>
+    <color name="player_8_start">#CC66FF</color>
+    <color name="player_8_end">#FF3366</color>
+    <color name="player_9_start">#FFB92C</color>
+    <color name="player_9_end">#FF1717</color>
+    <color name="player_10_start">#3FECFF</color>
+    <color name="player_10_end">#2C55FF</color>
+    
+    <color name="player_1_start_darker">#B35CFFD4</color>
+    <color name="player_1_end_darker">#B37B3EFF</color>
+    <color name="player_2_start_darker">#B3CDFF31</color>
+    <color name="player_2_end_darker">#B34AFFDC</color>
+    <color name="player_3_start_darker">#B3FFEE1F</color>
+    <color name="player_3_end_darker">#B3FF17C3</color>
+    <color name="player_4_start_darker">#B3C048FF</color>
+    <color name="player_4_end_darker">#B35440FF</color>
+    <color name="player_5_start_darker">#B366FBFF</color>
+    <color name="player_5_end_darker">#B3FF36F1</color>
+    <color name="player_6_start_darker">#B3FFFF3B</color>
+    <color name="player_6_end_darker">#B3FF6700</color>
+    <color name="player_7_start_darker">#B3FFFF43</color>
+    <color name="player_7_end_darker">#B33EFF6B</color>
+    <color name="player_8_start_darker">#B3CC66FF</color>
+    <color name="player_8_end_darker">#B3FF3366</color>
+    <color name="player_9_start_darker">#B3FFB92C</color>
+    <color name="player_9_end_darker">#B3FF1717</color>
+    <color name="player_10_start_darker">#B33FECFF</color>
+    <color name="player_10_end_darker">#B32C55FF</color>
+
+    <color name="snack_start">#F21C232B</color>
+    <color name="snack_end">#F2080A0C</color>
+
+</resources>

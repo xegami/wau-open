@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/background_rounded_dark_shadow"
+    android:paddingBottom="25dp"
+    tools:context=".activity.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_dialog_fragment_skip_round_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center"
+        android:text="Se ha solicitad pasar estar pregunta.\n¿Estás de acuerdo?"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/gl_dialog_fragment_skip_round_players_ready"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:columnCount="5"
+        android:useDefaultMargins="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dialog_fragment_skip_round_title" />
+
+    <TextView
+        android:id="@+id/tv_dialog_fragment_skip_round_waiting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="25dp"
+        android:fontFamily="@font/helvetica"
+        android:gravity="center"
+        android:text="Esperando al resto de jugadores..."
+        android:textColor="@color/grey_font"
+        android:textSize="14dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/gl_dialog_fragment_skip_round_players_ready" />
+
+    <ToggleButton
+        android:id="@+id/btn_dialog_fragment_skip_round_accept"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/selector_accept"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_dialog_fragment_skip_round_cancel"
+        app:layout_constraintTop_toBottomOf="@id/tv_dialog_fragment_skip_round_waiting" />
+
+    <ToggleButton
+        android:id="@+id/btn_dialog_fragment_skip_round_cancel"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/selector_cancel"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintLeft_toRightOf="@id/btn_dialog_fragment_skip_round_accept"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dialog_fragment_skip_round_waiting" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

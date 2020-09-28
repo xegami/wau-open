@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/background_rounded_dark_shadow"
+    android:paddingTop="25dp"
+    android:paddingBottom="25dp"
+    tools:context=".activity.MainActivity">
+
+    <!-- menu -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_dialog_fragment_settings_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_dialog_fragment_settings_menu_mute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_dialog_fragment_settings_menu_mute_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Quitar sonido"
+                android:textSize="14dp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_dialog_fragment_settings_menu_mute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_mute_on"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_dialog_fragment_settings_menu_mute_label"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_dialog_fragment_settings_menu_kick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_dialog_fragment_settings_menu_mute">
+
+            <TextView
+                android:id="@+id/tv_dialog_fragment_settings_menu_kick_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Expulsar jugador"
+                android:textSize="14dp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_dialog_fragment_settings_menu_kick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_kick"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_dialog_fragment_settings_menu_kick_label"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_dialog_fragment_settings_menu_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_dialog_fragment_settings_menu_kick">
+
+            <TextView
+                android:id="@+id/tv_dialog_fragment_settings_menu_about_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Acerca de"
+                android:textSize="14dp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_dialog_fragment_settings_menu_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_info"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_dialog_fragment_settings_menu_about_label"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_dialog_fragment_settings_menu_leave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toBottomOf="@id/cl_dialog_fragment_settings_menu_about">
+
+            <TextView
+                android:id="@+id/tv_dialog_fragment_settings_menu_leave_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Salir"
+                android:textSize="14dp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_dialog_fragment_settings_leave_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_leave"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_dialog_fragment_settings_menu_leave_label"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- kick player -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_dialog_fragment_settings_kick_player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/btn_dialog_fragment_settings_cancel"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_dialog_fragment_settings_kick_player_players"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintTop_toTopOf="parent"
+            app:spanCount="2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- kick player confirm -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_dialog_fragment_settings_kick_player_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/btn_dialog_fragment_settings_accept"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_dialog_fragment_settings_kick_player_confirm_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:text="¿Expulsar a Xegami?"
+            android:textSize="20dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_dialog_fragment_settings_kick_player_confirm_alert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:text="¡Ojo, ya no cumpliréis con el mínimo de jugadores y la partida terminará!"
+            android:textColor="@color/light_red"
+            android:textSize="16dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/tv_dialog_fragment_settings_kick_player_confirm_title" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- about -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_dialog_fragment_settings_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/btn_dialog_fragment_settings_accept"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_dialog_fragment_settings_about_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:text="@string/about_body"
+            android:textSize="16dp"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- leave -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_dialog_fragment_settings_leave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/btn_dialog_fragment_settings_accept"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_dialog_fragment_settings_leave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:text="¿Estás seguro de que deseas salir?"
+            android:textSize="20dp"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_dialog_fragment_settings_accept"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/selector_accept_no_toggle"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_dialog_fragment_settings_cancel" />
+
+    <Button
+        android:id="@+id/btn_dialog_fragment_settings_cancel"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/selector_cancel_no_toggle"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btn_dialog_fragment_settings_accept"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
